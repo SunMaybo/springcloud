@@ -1,0 +1,21 @@
+version: '2'
+services:
+       todosClient:
+           image: 192.168.200.23:5002/micro-spring-cloud/todos_client:v0.0.1
+           environment:
+             SERVER_PORT: 8585
+             SERVICE_NAME: todoClient
+             CONFIG_PROFILE:
+             CONFIG_LABEL:
+             CONFIG_URI:
+             CONSUL_HOST: 192.168.200.23
+             CONSUL_PORT: 8500
+             CONSUL_DiSCOVERY_IP: 192.168.100.95
+             CONSUL_DiSCOVERY_HEALTHCHECKINTERVAL:
+             GIT_URI:
+             GIT_USERNAME:
+             GIT_PASSWORD:
+             GIT_SEARCHPATHS:
+             TURBINE_CLUSTERNAME:
+           ports:
+             - "8585:8585"

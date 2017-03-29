@@ -1,0 +1,16 @@
+server:
+  port: 9090
+turbine:
+  appConfig: product,review,test,develop
+  clusterNameExpression: new String("default")
+spring:
+  application:
+    name: monitor
+  cloud:
+    consul:
+       host: 192.168.200.23
+       port: 8500
+       discovery:
+            register: true
+            healthCheckInterval: 15s
+            instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}

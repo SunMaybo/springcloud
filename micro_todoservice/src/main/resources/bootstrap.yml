@@ -1,0 +1,19 @@
+spring:
+    application:
+         name: db
+    cloud:
+       config:
+         profile:
+             test
+         label: master # optional
+         uri: http://192.168.100.95:${config.port:8888}
+       consul:
+             host: 192.168.200.23
+             port: 8500
+             discovery:
+                   register: false
+                   healthCheckInterval: 15s
+                   instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+server:
+    port: 7777
+

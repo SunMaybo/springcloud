@@ -1,0 +1,13 @@
+server:
+     port: 9999
+     contextPath: /uaa
+     use-forward-headers: true
+security:
+   sessions: if-required
+   oauth2:
+      client:
+          clientId: acme
+          clientSecret: acmesecret
+          authorized-grant-types:
+                           authorization_code,refresh_token,password
+          scope: openid

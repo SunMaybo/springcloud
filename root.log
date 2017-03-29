@@ -1,0 +1,44 @@
+2016-12-20 10:06:32.160  INFO 3380 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@368239c8: startup date [Tue Dec 20 10:06:32 CST 2016]; root of context hierarchy
+2016-12-20 10:06:32.521  INFO 3380 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-12-20 10:06:32.546  INFO 3380 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$be7e5c8b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.2.RELEASE)
+
+2016-12-20 10:06:33.075  INFO 3380 --- [           main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://192.168.100.95:8888
+2016-12-20 10:06:33.519  INFO 3380 --- [           main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=db, profiles=[test], label=master, version=7681258a89652dfe410f8bffc031a42250ace496, state=null
+2016-12-20 10:06:33.520  INFO 3380 --- [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[MapPropertySource [name='configClient'], MapPropertySource [name='http://192.168.200.19/mayunbao/dbConfig.git/db-test.yml']]]
+2016-12-20 10:06:33.528  INFO 3380 --- [           main] c.j.m.c.t.MicroTodoserviceApplication    : No active profile set, falling back to default profiles: default
+2016-12-20 10:06:33.562  INFO 3380 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@97e1986: startup date [Tue Dec 20 10:06:33 CST 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@368239c8
+2016-12-20 10:06:35.255  WARN 3380 --- [           main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-12-20 10:06:35.496  INFO 3380 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=729cc69b-6f67-3bd4-b1dd-ac1b1e9d04d2
+2016-12-20 10:06:35.516  INFO 3380 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-12-20 10:06:35.724  INFO 3380 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [class org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$9827f1b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-20 10:06:35.787  INFO 3380 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a264598e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-20 10:06:35.860  INFO 3380 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$be7e5c8b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-20 10:06:36.210  INFO 3380 --- [           main] org.xnio                                 : XNIO version 3.3.6.Final
+2016-12-20 10:06:36.237  INFO 3380 --- [           main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.6.Final
+2016-12-20 10:06:36.373  WARN 3380 --- [           main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2016-12-20 10:06:36.374  WARN 3380 --- [           main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2016-12-20 10:06:36.399  INFO 3380 --- [           main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2016-12-20 10:06:36.400  INFO 3380 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2838 ms
+2016-12-20 10:06:36.843  INFO 3380 --- [           main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-20 10:06:36.853  INFO 3380 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2016-12-20 10:06:36.854  INFO 3380 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-20 10:06:36.855  INFO 3380 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-20 10:06:36.855  INFO 3380 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-20 10:06:36.855  INFO 3380 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-20 10:06:36.855  INFO 3380 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-12-20 10:06:36.855  INFO 3380 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-12-20 10:06:38.094  INFO 3380 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@97e1986: startup date [Tue Dec 20 10:06:33 CST 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@368239c8
+2016-12-20 10:06:38.471  INFO 3380 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/todos]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.juxinli.micro.cloud.todoservice.MicroTodoserviceApplication.todos()
+2016-12-20 10:06:38.475  INFO 3380 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-20 10:06:38.475  INFO 3380 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-20 10:06:38.530  INFO 3380 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-20 10:06:38.530  INFO 3380 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-20 10:06:38.599  INFO 3380 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]

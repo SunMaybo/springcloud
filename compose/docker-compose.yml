@@ -1,0 +1,23 @@
+test:
+   image: test:v0.0.1
+   container_name: test
+   environment:
+     SERVER_PORT: 1234
+     SERVICE_NAME: db
+     CONFIG_PROFILE: test
+     CONFIG_LABEL: master
+     CONFIG_URI: http://192.168.100.95:8888
+     CONSUL_HOST: 192.168.200.23
+     CONSUL_PORT: 8500
+     CONSUL_DiSCOVERY_IP: 192.168.100.234
+     CONSUL_DiSCOVERY_HEALTHCHECKINTERVAL:
+     GIT_URI:
+     GIT_USERNAME:
+     GIT_PASSWORD:
+     GIT_SEARCHPATHS:
+     TURBINE_CLUSTERS:
+     TURBINE_URL:
+     TURBINE_CLUSTERNAMEEXPRESSION:
+     TURBINE_APPCONFIG:
+   ports:
+     - "1234:1234"

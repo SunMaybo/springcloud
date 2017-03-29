@@ -1,0 +1,17 @@
+#spring.boot.admin.routes.endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,hystrix.stream,activiti
+server:
+  port: 9090
+spring:
+  boot:
+    admin:
+       routes:
+         endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,hystrix.stream,activiti
+  application:
+    name: admin
+  cloud:
+    consul:
+       host: 192.168.200.23
+       port: 8500
+       discovery:
+            healthCheckInterval: 15s
+            instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}

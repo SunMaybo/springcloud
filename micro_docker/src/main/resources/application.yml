@@ -1,0 +1,13 @@
+server:
+     port: 8761
+spring:
+    cloud:
+        consul:
+            host: 192.168.200.23
+            port: 8500
+            refresh: true
+            internal: 6000
+docker:
+    swarm:
+        host: 192.168.100.95
+        port: 2375

@@ -1,0 +1,23 @@
+spring:
+    application:
+         name: todoClient01
+    cloud:
+       consul:
+             host: 192.168.200.23
+             port: 8500
+             discovery:
+                   register: false
+                   healthCheckInterval: 15s
+                   instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+server:
+    port: 5555
+hystrix:
+   command:
+     default:
+       execution:
+         isolation:
+           thread:
+             timeoutInMilliseconds: 6000
+ribbon:
+    ConnectTimeout: 6000
+    ReadTimeout: 6000

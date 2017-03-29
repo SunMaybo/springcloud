@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/micro_dbConfigCenter/micro_dbConfigCenter.iml" filepath="$PROJECT_DIR$/micro_dbConfigCenter/micro_dbConfigCenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_dbZuul/micro_dbZuul.iml" filepath="$PROJECT_DIR$/micro_dbZuul/micro_dbZuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_docker/micro_docker.iml" filepath="$PROJECT_DIR$/micro_docker/micro_docker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_monitor/micro_monitor.iml" filepath="$PROJECT_DIR$/micro_monitor/micro_monitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_security/micro_security.iml" filepath="$PROJECT_DIR$/micro_security/micro_security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_springcloud.iml" filepath="$PROJECT_DIR$/micro_springcloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_template/micro_template.iml" filepath="$PROJECT_DIR$/micro_template/micro_template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_todos/micro_todos.iml" filepath="$PROJECT_DIR$/micro_todos/micro_todos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_todosclient/micro_todosclient.iml" filepath="$PROJECT_DIR$/micro_todosclient/micro_todosclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_todoservice/micro_todoservice.iml" filepath="$PROJECT_DIR$/micro_todoservice/micro_todoservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_admin/monitor.admin.iml" filepath="$PROJECT_DIR$/micro_admin/monitor.admin.iml" />
+    </modules>
+  </component>
+</project>

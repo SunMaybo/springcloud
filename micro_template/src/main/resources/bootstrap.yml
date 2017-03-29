@@ -1,0 +1,14 @@
+server:
+     port: 8761
+spring:
+    application:
+            name: template
+    cloud:
+        consul:
+          discovery:
+                  enabled: true
+                  register: false
+          host: 192.168.200.23
+          port: 8500
+          refresh: true
+          internal: 6000

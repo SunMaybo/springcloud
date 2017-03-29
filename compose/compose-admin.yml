@@ -1,0 +1,24 @@
+     version: '2'
+     services:
+       admin:
+           image: 192.168.200.23:5002/micro-spring-cloud/admin:v0.0.1
+           container_name: admin
+           environment:
+             SERVER_PORT: 4321
+             SERVICE_NAME: admin
+             CONFIG_PROFILE:
+             CONFIG_LABEL:
+             CONFIG_URI:
+             CONSUL_HOST: 192.168.200.23
+             CONSUL_PORT: 8500
+             CONSUL_DiSCOVERY_IP: 192.168.100.234
+             CONSUL_DiSCOVERY_HEALTHCHECKINTERVAL:
+             GIT_URI:
+             GIT_USERNAME:
+             GIT_PASSWORD:
+             GIT_SEARCHPATHS:
+             TURBINE_CLUSTERNAMEEXPRESSION:
+             TURBINE_CLUSTERS: default
+             TURBINE_URL: http://192.168.100.95:8888/turbine.stream
+           ports:
+             - "4321:4321"

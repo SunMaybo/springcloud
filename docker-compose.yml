@@ -1,0 +1,84 @@
+version: '2'
+services:
+          dbConfigCenter:
+           image: 192.168.200.23:5002/micro-spring-cloud/dbconfigcenter:v0.0.1
+           container_name: dbConfigCenter
+           environment:
+             SERVER_PORT: 8888
+             SERVICE_NAME: dbConfigCenter
+             CONFIG_PROFILE:
+             CONFIG_LABEL:
+             CONFIG_URI:
+             CONSUL_HOST: 192.168.200.23
+             CONSUL_PORT: 8500
+             CONSUL_DiSCOVERY_IP: 192.168.100.95
+             CONSUL_DiSCOVERY_HEALTHCHECKINTERVAL:
+             GIT_URI: http://192.168.200.19/mayunbao/dbConfig.git
+             GIT_USERNAME: mayunbao
+             GIT_PASSWORD: Qwer123456
+             GIT_SEARCHPATHS:
+           ports:
+              - "8888:8888"
+
+          dbService:
+           image: 192.168.200.23:5002/micro-spring-cloud/db_service:v0.0.1
+           container_name: db
+           environment:
+             SERVER_PORT: 9999
+             SERVICE_NAME: db
+             CONFIG_PROFILE: test
+             CONFIG_LABEL: master
+             CONFIG_URI: http://192.168.100.95:8888
+             CONSUL_HOST: 192.168.200.23
+             CONSUL_PORT: 8500
+             CONSUL_DiSCOVERY_IP: 192.168.100.95
+             CONSUL_DiSCOVERY_HEALTHCHECKINTERVAL:
+             GIT_URI:
+             GIT_USERNAME:
+             GIT_PASSWORD:
+             GIT_SEARCHPATHS:
+           ports:
+             - "9999:9999"
+
+          monitor:
+           image: 192.168.200.23:5002/micro-spring-cloud/monitor:v0.0.1
+           container_name: monitor
+           environment:
+             SERVER_PORT: 7777
+             SERVICE_NAME: monitor
+             CONFIG_PROFILE:
+             CONFIG_LABEL:
+             CONFIG_URI:
+             CONSUL_HOST: 192.168.200.23
+             CONSUL_PORT: 8500
+             CONSUL_DiSCOVERY_IP: 192.168.100.95
+             CONSUL_DiSCOVERY_HEALTHCHECKINTERVAL:
+             GIT_URI:
+             GIT_USERNAME:
+             GIT_PASSWORD:
+             GIT_SEARCHPATHS:
+             TURBINE_CLUSTERNAMEEXPRESSION: new String("default")
+           ports:
+             - "7777:7777"
+          admin:
+           image: 192.168.200.23:5002/micro-spring-cloud/admin:v0.0.1
+           container_name: admin
+           environment:
+             SERVER_PORT: 6666
+             SERVICE_NAME: admin
+             CONFIG_PROFILE:
+             CONFIG_LABEL:
+             CONFIG_URI:
+             CONSUL_HOST: 192.168.200.23
+             CONSUL_PORT: 8500
+             CONSUL_DiSCOVERY_IP: 192.168.100.95
+             CONSUL_DiSCOVERY_HEALTHCHECKINTERVAL:
+             GIT_URI:
+             GIT_USERNAME:
+             GIT_PASSWORD:
+             GIT_SEARCHPATHS:
+             TURBINE_CLUSTERNAMEEXPRESSION:
+             TURBINE_CLUSTERS: default
+             TURBINE_URL: http://192.168.100.95:8888/turbine.stream
+           ports:
+             - "6666:6666"
